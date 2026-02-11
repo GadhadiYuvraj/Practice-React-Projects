@@ -1,0 +1,63 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+/* Page background */
+body {
+  background-color: #f4f4f4;
+}
+
+/* Wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* Accordion container */
+.accordian {
+  width: 600px;
+  background: #eaeaea;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Each item */
+.item {
+  background: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+}
+
+/* Title section */
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.title:hover {
+  background-color: #f2f2f2;
+}
+
+.title h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Plus icon */
+.title span {
+  font-size: 22px;
+  font-weight: bold;
+}
