@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    font-family: "SF Pro Display", sans-serif;
+}
+.page-container{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <Header title="45" searchBar={true} />
+      <Header title="My Todo List" searchBar={true} />
       <Footer />
       <Todos />
     </>
