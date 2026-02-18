@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Counter Card */
+.counter-container {
+  width: 360px;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  /* Neutral card base */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode card override */
+.dark .counter-container {
+  background: rgba(35, 37, 45, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.counter-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+/* Count Number */
+.count-display {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  transition: all 0.2s ease;
+  color: #6d5dfc; /* Purple identity */
+}
+
+/* Dark mode number accent */
+.dark .count-display {
+  color: #6bb8ff; /* Baby blue accent */
+}
+
+/* Button Wrapper */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Base Button Style */
+.button-group button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Light Mode Buttons */
+.increment {
+  background: #cdb4db;
+  color: #222;
+}
+
+.increment:hover {
+  background: #b5838d;
+  transform: scale(1.05);
+}
+
+.decrement {
+  background: #e4cfc1;
+  color: #222;
+}
+
+.decrement:hover {
+  background: #d4b8a6;
+  transform: scale(1.05);
+}
+
+.reset {
+  background: #f3f3f3;
+  color: #222;
+}
+
+.reset:hover {
+  background: #e5e5e5;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Buttons */
+.dark .increment {
+  background: #4da3ff;
+  color: white;
+}
+
+.dark .increment:hover {
+  background: #6bb8ff;
+}
+
+.dark .decrement {
+  background: #3b82f6;
+  color: white;
+}
+
+.dark .decrement:hover {
+  background: #60a5fa;
+}
+
+.dark .reset {
+  background: #2e2f36;
+  color: #f5f5f5;
+}
+
+.dark .reset:hover {
+  background: #3a3b44;
+}

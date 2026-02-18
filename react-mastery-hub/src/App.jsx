@@ -1,11 +1,11 @@
-import Counter from "./pages/Counter/Counter";
+import Counter from "./pages/counter/Counter";
 import Todo from "./pages/Todo/Todo";
 
 function App() {
   return (
     <>
-      <Counter />
       <Todo />
+      <Counter />
     </>
   );
 }

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./todoStyle.css";
 
 function Todo() {
-  let [todolist, setTodoList] = useState([]);
+  const [todolist, setTodoList] = useState([]);
+  // const [] = useState();
 
   const saveTodoList = (event) => {
     const toname = event.target.toname.value;
@@ -19,9 +20,13 @@ function Todo() {
 
   const list = todolist.map((value, index) => {
     return (
-      <>
-        <TodoListItems value={value} />
-      </>
+      <TodoListItems
+        value={value}
+        key={index}
+        indexNumber={index}
+        todolist={todolist}
+        setTodoList={setTodoList}
+      />
     );
   });
 
@@ -49,11 +54,21 @@ function Todo() {
 
 export default Todo;
 
-function TodoListItems({ value }) {
+function TodoListItems({ value, indexNumber, todolist, setTodoList }) {
+  const deleteTodoItem = () => {
+    const finalData = todolist.filter((v, i) => i != indexNumber);
+    setTodoList(finalData);
+  };
+
+  const [status, setStatus] = useState(false);
+  const checkStatus = () => {
+    setStatus(!status);
+  };
   return (
     <>
-      <li>
-        {value} <span>&times;</span>
+      <li className={status ? "complete" : ""} onClick={checkStatus}>
+        {indexNumber + 1} {""}
+        {value} <span onClick={deleteTodoItem}>&times;</span>
       </li>
     </>
   );
