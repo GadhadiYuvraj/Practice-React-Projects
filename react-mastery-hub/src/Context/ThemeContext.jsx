@@ -1,11 +1,11 @@
-import React from "react";
+import { Children, createContext } from "react";
 
-function ThemeContext() {
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
   return (
     <>
-      <div>ThemeContext</div>
+      <ThemeContext.Provider>{children}</ThemeContext.Provider>
     </>
   );
-}
-
-export default ThemeContext;
+};
